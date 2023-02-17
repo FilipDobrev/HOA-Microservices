@@ -1,0 +1,43 @@
+package nl.tudelft.sem.group23a.hoa.authentication;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import java.util.Date;
+import java.util.function.Function;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+/**
+ * Verifies the JWT token in the request for validity.
+ */
+@Component
+public class JwtTokenVerifier {
+    @Value("${jwt.secret}")
+    private transient String jwtSecret;
+
+    public boolean validateToken(String token) {
+        return !isTokenExpired(token);
+    }
+
+    public String getMemberIdFromToken(String token) {
+        return getClaimFromToken(token, Claims::getSubject);
+    }
+
+    public Date getExpirationDateFromToken(String token) {
+        return getClaimFromToken(token, Claims::getExpiration);
+    }
+
+    private Boolean isTokenExpired(String token) {
+        final Date expiration = getExpirationDateFromToken(token);
+        return expiration.before(new Date());
+    }
+
+    private <T> T getClaimFromToken(String token, Function<Claims, T> claimResolver) {
+        final Claims claims = getClaims(token);
+        return claimResolver.apply(claims);
+    }
+
+    private Claims getClaims(String token) {
+        return Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody();
+    }
+}

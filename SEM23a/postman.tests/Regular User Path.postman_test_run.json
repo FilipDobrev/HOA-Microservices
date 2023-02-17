@@ -1,0 +1,754 @@
+{
+	"id": "1bdbd58c-4594-42b7-83b4-a72cc848aa15",
+	"name": "Regular User Path",
+	"timestamp": "2022-12-23T12:49:14.166Z",
+	"collection_id": "0-d8c8bfe4-07ed-4bfa-9cae-d51aa4db3f95",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 31,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "d7fa2dd5-e7db-4ca3-a6ab-7608efdd1e20",
+			"name": "Register",
+			"url": "http://localhost:8081/register",
+			"time": 354,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				354
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ba432182-402d-48a3-bc2f-ff97f2750381",
+			"name": "Second User",
+			"url": "http://localhost:8081/register",
+			"time": 121,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				121
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "34c5525e-eb9e-4f99-8753-4360ed8b1502",
+			"name": "Already Existing User",
+			"url": "http://localhost:8081/register",
+			"time": 17,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check correct 'Already Taken' response": true
+			},
+			"testPassFailCounts": {
+				"Check correct 'Already Taken' response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Check correct 'Already Taken' response": true
+				}
+			]
+		},
+		{
+			"id": "45feb27e-8cd7-4a99-b186-fb0d44c86432",
+			"name": "Login",
+			"url": "http://localhost:8081/login",
+			"time": 187,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				187
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "b2562203-86cd-4a71-8fc9-766d777af3a2",
+			"name": "Second User Login",
+			"url": "http://localhost:8081/login",
+			"time": 268,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				268
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "7698161c-6af4-467a-9e17-7155fbcfe00d",
+			"name": "Wrong login",
+			"url": "http://localhost:8081/login",
+			"time": 555,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				555
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "780c95e8-c3db-4c4c-9b80-b4ae2dac43db",
+			"name": "Create Hoa",
+			"url": "http://localhost:8083/hoa/",
+			"time": 471,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"This is the first hoa created": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"This is the first hoa created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				471
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"This is the first hoa created": true
+				}
+			]
+		},
+		{
+			"id": "debda375-840a-4809-9841-36ac42d58cf9",
+			"name": "Join Hoa",
+			"url": "http://localhost:8083/hoa/join/1/",
+			"time": 333,
+			"responseCode": {
+				"code": 202,
+				"name": "Accepted"
+			},
+			"tests": {
+				"Status code is success": true
+			},
+			"testPassFailCounts": {
+				"Status code is success": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				333
+			],
+			"allTests": [
+				{
+					"Status code is success": true
+				}
+			]
+		},
+		{
+			"id": "4e1c2b15-ee56-470a-8f2d-3e201748af2b",
+			"name": "Second User Join Hoa",
+			"url": "http://localhost:8083/hoa/join/1/",
+			"time": 256,
+			"responseCode": {
+				"code": 202,
+				"name": "Accepted"
+			},
+			"tests": {
+				"Status code is success": true
+			},
+			"testPassFailCounts": {
+				"Status code is success": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				256
+			],
+			"allTests": [
+				{
+					"Status code is success": true
+				}
+			]
+		},
+		{
+			"id": "d10a59a0-fe53-425c-9191-e6eeec5ef22a",
+			"name": "Join When Already In",
+			"url": "http://localhost:8083/hoa/join/1/",
+			"time": 278,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is forbidden": true
+			},
+			"testPassFailCounts": {
+				"Status code is forbidden": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				278
+			],
+			"allTests": [
+				{
+					"Status code is forbidden": true
+				}
+			]
+		},
+		{
+			"id": "edc31032-eb43-436f-b25a-2358273f76fd",
+			"name": "Join Non existent Hoa",
+			"url": "http://localhost:8083/hoa/join/666/",
+			"time": 318,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is not found": true
+			},
+			"testPassFailCounts": {
+				"Status code is not found": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				318
+			],
+			"allTests": [
+				{
+					"Status code is not found": true
+				}
+			]
+		},
+		{
+			"id": "86b239ea-6fdf-4cdc-8da7-da4d886396e1",
+			"name": "Add Activity",
+			"url": "http://localhost:8084/activities",
+			"time": 124,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"This is the first hoa created": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"This is the first hoa created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				124
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"This is the first hoa created": true
+				}
+			]
+		},
+		{
+			"id": "105a3b0b-ea6d-4a24-80ce-3a0d5507376b",
+			"name": "Get Noticeboard",
+			"url": "http://localhost:8083/hoa/notice-board/1",
+			"time": 75,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"assertLength": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"assertLength": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				75
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"assertLength": true
+				}
+			]
+		},
+		{
+			"id": "5eb89577-31f0-45c9-a3fd-5d2f38837899",
+			"name": "React to Gathering",
+			"url": "http://localhost:8084/activities/hoa/1/gatherings/2/vote",
+			"time": 475,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is success": true
+			},
+			"testPassFailCounts": {
+				"Status code is success": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				475
+			],
+			"allTests": [
+				{
+					"Status code is success": true
+				}
+			]
+		},
+		{
+			"id": "c22e0c20-4f4b-4aba-9ff0-af86c8b14b4a",
+			"name": "Gathering Results",
+			"url": "http://localhost:8084/activities/hoa/1/gatherings/2",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is success": true,
+				"assert 1 going": true,
+				"assert Description": true
+			},
+			"testPassFailCounts": {
+				"Status code is success": {
+					"pass": 1,
+					"fail": 0
+				},
+				"assert 1 going": {
+					"pass": 1,
+					"fail": 0
+				},
+				"assert Description": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Status code is success": true,
+					"assert 1 going": true,
+					"assert Description": true
+				}
+			]
+		},
+		{
+			"id": "8369efa1-752f-4a3b-b297-abc88189ec16",
+			"name": "Empty board Members",
+			"url": "http://localhost:8083/hoa/1/board",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is success": true,
+				"assert Description": true
+			},
+			"testPassFailCounts": {
+				"Status code is success": {
+					"pass": 1,
+					"fail": 0
+				},
+				"assert Description": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Status code is success": true,
+					"assert Description": true
+				}
+			]
+		},
+		{
+			"id": "8c155a8f-9a7b-4890-af38-b3a334f5001f",
+			"name": "Apply for Election",
+			"url": "http://localhost:8083/hoa/1/election/apply",
+			"time": 890,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 2xx": true
+			},
+			"testPassFailCounts": {
+				"Status code is 2xx": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				890
+			],
+			"allTests": [
+				{
+					"Status code is 2xx": true
+				}
+			]
+		},
+		{
+			"id": "5f883638-142e-429e-b656-98bc08505d1f",
+			"name": "Second User Vote",
+			"url": "http://localhost:8083/hoa/1/election/vote",
+			"time": 996,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 2xx": true
+			},
+			"testPassFailCounts": {
+				"Status code is 2xx": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				996
+			],
+			"allTests": [
+				{
+					"Status code is 2xx": true
+				}
+			]
+		},
+		{
+			"id": "46b28040-503e-446f-8cfd-ddac27d2b60e",
+			"name": "Check New Board Members",
+			"url": "http://localhost:8083/hoa/1/board",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 2xx": true,
+				"Assert 1 board member": true,
+				"Assert SomeUser is a Board member": true
+			},
+			"testPassFailCounts": {
+				"Status code is 2xx": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert 1 board member": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assert SomeUser is a Board member": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Status code is 2xx": true,
+					"Assert 1 board member": true,
+					"Assert SomeUser is a Board member": true
+				}
+			]
+		},
+		{
+			"id": "5127056e-ded0-42ee-97e5-0ecff8930658",
+			"name": "Leave Hoa",
+			"url": "http://localhost:8083/hoa/leave/1",
+			"time": 486,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				486
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "c17d47eb-8522-49aa-b7ef-29d3f74bb62a",
+			"name": "Leave When Not In",
+			"url": "http://localhost:8083/hoa/leave/1",
+			"time": 134,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Expected not found": true
+			},
+			"testPassFailCounts": {
+				"Expected not found": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				134
+			],
+			"allTests": [
+				{
+					"Expected not found": true
+				}
+			]
+		},
+		{
+			"id": "d310780a-366e-42fa-8949-abd2b7fe5840",
+			"name": "Get Noticeboard When Left",
+			"url": "http://localhost:8083/hoa/notice-board/1",
+			"time": 17,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"assertLength": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"assertLength": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"assertLength": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 6411,
+	"collection": {
+		"requests": [
+			{
+				"id": "d7fa2dd5-e7db-4ca3-a6ab-7608efdd1e20",
+				"method": "POST"
+			},
+			{
+				"id": "ba432182-402d-48a3-bc2f-ff97f2750381",
+				"method": "POST"
+			},
+			{
+				"id": "34c5525e-eb9e-4f99-8753-4360ed8b1502",
+				"method": "POST"
+			},
+			{
+				"id": "45feb27e-8cd7-4a99-b186-fb0d44c86432",
+				"method": "POST"
+			},
+			{
+				"id": "b2562203-86cd-4a71-8fc9-766d777af3a2",
+				"method": "POST"
+			},
+			{
+				"id": "7698161c-6af4-467a-9e17-7155fbcfe00d",
+				"method": "POST"
+			},
+			{
+				"id": "780c95e8-c3db-4c4c-9b80-b4ae2dac43db",
+				"method": "POST"
+			},
+			{
+				"id": "debda375-840a-4809-9841-36ac42d58cf9",
+				"method": "PUT"
+			},
+			{
+				"id": "4e1c2b15-ee56-470a-8f2d-3e201748af2b",
+				"method": "PUT"
+			},
+			{
+				"id": "d10a59a0-fe53-425c-9191-e6eeec5ef22a",
+				"method": "PUT"
+			},
+			{
+				"id": "edc31032-eb43-436f-b25a-2358273f76fd",
+				"method": "PUT"
+			},
+			{
+				"id": "86b239ea-6fdf-4cdc-8da7-da4d886396e1",
+				"method": "POST"
+			},
+			{
+				"id": "105a3b0b-ea6d-4a24-80ce-3a0d5507376b",
+				"method": "GET"
+			},
+			{
+				"id": "5eb89577-31f0-45c9-a3fd-5d2f38837899",
+				"method": "PUT"
+			},
+			{
+				"id": "c22e0c20-4f4b-4aba-9ff0-af86c8b14b4a",
+				"method": "GET"
+			},
+			{
+				"id": "8369efa1-752f-4a3b-b297-abc88189ec16",
+				"method": "GET"
+			},
+			{
+				"id": "8c155a8f-9a7b-4890-af38-b3a334f5001f",
+				"method": "PUT"
+			},
+			{
+				"id": "5f883638-142e-429e-b656-98bc08505d1f",
+				"method": "PUT"
+			},
+			{
+				"id": "46b28040-503e-446f-8cfd-ddac27d2b60e",
+				"method": "GET"
+			},
+			{
+				"id": "5127056e-ded0-42ee-97e5-0ecff8930658",
+				"method": "PUT"
+			},
+			{
+				"id": "c17d47eb-8522-49aa-b7ef-29d3f74bb62a",
+				"method": "PUT"
+			},
+			{
+				"id": "d310780a-366e-42fa-8949-abd2b7fe5840",
+				"method": "GET"
+			}
+		]
+	}
+}

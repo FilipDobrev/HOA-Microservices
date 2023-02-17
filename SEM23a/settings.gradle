@@ -1,0 +1,7 @@
+rootProject.name = 'group23a'
+
+include 'commons'
+include 'hoa-microservice'
+include 'notifications-microservice'
+include 'activity-and-election-microservice'
+include 'user-microservice'
